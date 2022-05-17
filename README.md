@@ -30,3 +30,10 @@ npm init
   "homepage": "https://github.com/mi83ki/study-webapp#readme"
 }
 ```
+
+## .gitignoreの作成
+1. 「.gitignore」ファイルを新規作成する
+1. 以下のサイトにアクセスする
+    https://www.toptal.com/developers/gitignore
+1. NodeとVisualStudioCodeを選択して作成ボタンを押下する
+1. 作成された文字列を.gitignoreファイルにコピペする
