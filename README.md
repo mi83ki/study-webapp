@@ -32,7 +32,7 @@ npm init
 ```
 
 ## .gitignoreの作成
-1. 「.gitignore」ファイルを新規作成する
+1. 「.gitignore」ファイルをルートディレクトリに新規作成する
 1. 以下のサイトにアクセスする
     https://www.toptal.com/developers/gitignore
 1. NodeとVisualStudioCodeを選択して作成ボタンを押下する
@@ -62,3 +62,21 @@ npm init
       ]
     }
     ```
+
+## .envの作成
+環境ファイルを作成する。
+1. 「.env」ファイルをルートディレクトリに新規作成する
+1. 以下を入力する
+    ```
+    PORT=3000
+    ```
+
+## app.jsの作成と実行
+1. 「app.js」ファイルをルートディレクトリに新規作成する
+1. 以下を入力して保存する
+    ```javascript
+    const PORT = process.env.PORT;
+    console.log(PORT);
+    ```
+1. F5キーを押してデバッグを開始する
+1. ターミナルに 3000 が表示されればOK
