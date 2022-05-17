@@ -37,3 +37,28 @@ npm init
     https://www.toptal.com/developers/gitignore
 1. NodeとVisualStudioCodeを選択して作成ボタンを押下する
 1. 作成された文字列を.gitignoreファイルにコピペする
+
+## デバッグの設定
+1. VSCodeの実行とデバッグボタンを押す
+1. launch.jsonを作成するを選択する
+1. 以下の内容に書き換える
+    ```json
+    {
+      // IntelliSense を使用して利用可能な属性を学べます。
+      // 既存の属性の説明をホバーして表示します。
+      // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+      "version": "0.2.0",
+      "configurations": [
+        {
+          "type": "node",
+          "request": "launch",
+          "name": "Launch Program",
+          "skipFiles": [
+            "<node_internals>/**"
+          ],
+          "program": "${workspaceFolder}/app.js",
+          "envFile": "${workspaceFolder}/.env"
+        }
+      ]
+    }
+    ```
