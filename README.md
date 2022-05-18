@@ -80,3 +80,59 @@ npm init
     ```
 1. F5キーを押してデバッグを開始する
 1. ターミナルに 3000 が表示されればOK
+
+## 静的解析ツール ESLintのインストール
+
+1. VSCodeの拡張機能で「eslint」を検索してESLintをインストール
+1. ターミナルで以下を実行する
+    ```bash
+    $ npm install eslint@^7.25.0 --dev
+    $ npx eslint --init
+      √ How would you like to use ESLint? · syntax
+      √ What type of modules does your project use? · commonjs
+      √ Which framework does your project use? · none
+      √ Does your project use TypeScript? · No / Yes
+      √ Where does your code run? · browser, node
+      √ What format do you want your config file to be in? · JavaScript
+    ```
+1. 「.eslintrc.js」を開いてextendsとjqueryとrulesを追加する
+    ```javascript
+    module.exports = {
+      "env": {
+          "browser": true,
+          "jquery": true,
+          "commonjs": true,
+          "es2021": true,
+          "node": true
+      },
+      "extends": "eslint:recommended",
+      "parserOptions": {
+          "ecmaVersion": 12
+      },
+      "rules": {
+        "indent": [
+          "error",
+          2,
+          { "SwitchCase": 1}
+        ],
+        "quotes": [
+          "error",
+          "double"
+        ],
+        "semi": [
+          "error",
+          "always"
+        ],
+        "no-unused-vars": [
+          "error",
+          {
+            "vars": "all",
+            "args": "none"
+          }
+        ]
+        "no-console": [
+          "off"
+        ]
+      }
+    };
+    ```
