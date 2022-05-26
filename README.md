@@ -136,3 +136,9 @@ npm init
       }
     };
     ```
+
+    ## expressのインストール
+    ターミナルを開いて以下のコマンドでexpressモジュールをインストールする
+    ```bash
+    npm install express
+    ```
