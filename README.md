@@ -137,8 +137,16 @@ npm init
     };
     ```
 
-    ## expressのインストール
-    ターミナルを開いて以下のコマンドでexpressモジュールをインストールする
+## expressのインストール
+ターミナルを開いて以下のコマンドでexpressモジュールをインストールする
+```bash
+npm install express
+```
+
+## ejsのインストール
+
+1. VSCodeの拡張機能で「ejs」を検索してEJS language supportをインストール
+1. ejsパッケージをインストール
     ```bash
-    npm install express
+    npm install ejs
     ```
