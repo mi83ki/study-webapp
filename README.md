@@ -150,3 +150,9 @@ npm install express
     ```bash
     npm install ejs
     ```
+
+## serve-faviconパッケージのインストール
+faviconを配信するためにserve-faviconをインストールする
+```bash
+npm install serve-favicon
+```
