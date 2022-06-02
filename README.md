@@ -156,3 +156,10 @@ faviconを配信するためにserve-faviconをインストールする
 ```bash
 npm install serve-favicon
 ```
+
+## サーバーサイド情報の隠ぺい
+以下のコードをapp.jsに記述することで、サーバー側の情報を隠ぺいすることができる。
+これを記述しない場合、httpヘッダの応答からnode.jsのexpressを使用していることがバレるため、脆弱性情報から攻撃されやすくなる。
+```javascript
+app.disable("x-powered-by");
+```
