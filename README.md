@@ -188,3 +188,11 @@ npm install serve-favicon
 ```javascript
 app.disable("x-powered-by");
 ```
+
+### log4jsのインストール
+
+以下のコマンドでlog4jsをインストールする。
+
+```bash
+npm install log4js
+```
