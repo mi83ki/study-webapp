@@ -1,14 +1,20 @@
 # study-webapp
+
 Node.js+Express+MySQLで作る安全なWebアプリケーションの勉強
 
-# やったこと
-## package.jsonの作成
+## やったこと
+
+### package.jsonの作成
+
 以下のコマンドでプロジェクトを新規作成し、package.jsonを作成する。
 エントリポイントはapp.jsにする。
+
 ```bash
 npm init
 ```
+
 生成されたpackage.jsonは以下になる。
+
 ```json
 {
   "name": "study-webapp",
@@ -31,17 +37,20 @@ npm init
 }
 ```
 
-## .gitignoreの作成
+### .gitignoreの作成
+
 1. 「.gitignore」ファイルをルートディレクトリに新規作成する
 1. 以下のサイトにアクセスする
-    https://www.toptal.com/developers/gitignore
+    <https://www.toptal.com/developers/gitignore>
 1. NodeとVisualStudioCodeを選択して作成ボタンを押下する
 1. 作成された文字列を.gitignoreファイルにコピペする
 
-## デバッグの設定
+### デバッグの設定
+
 1. VSCodeの実行とデバッグボタンを押す
 1. launch.jsonを作成するを選択する
 1. 以下の内容に書き換える
+
     ```json
     {
       // IntelliSense を使用して利用可能な属性を学べます。
@@ -63,28 +72,35 @@ npm init
     }
     ```
 
-## .envの作成
+### .envの作成
+
 環境ファイルを作成する。
+
 1. 「.env」ファイルをルートディレクトリに新規作成する
 1. 以下を入力する
-    ```
+
+    ```env
     PORT=3000
     ```
 
-## app.jsの作成と実行
+### app.jsの作成と実行
+
 1. 「app.js」ファイルをルートディレクトリに新規作成する
 1. 以下を入力して保存する
+
     ```javascript
     const PORT = process.env.PORT;
     console.log(PORT);
     ```
+
 1. F5キーを押してデバッグを開始する
 1. ターミナルに 3000 が表示されればOK
 
-## 静的解析ツール ESLintのインストール
+### 静的解析ツール ESLintのインストール
 
 1. VSCodeの拡張機能で「eslint」を検索してESLintをインストール
 1. ターミナルで以下を実行する
+
     ```bash
     $ npm install eslint@^7.25.0 --dev
     $ npx eslint --init
@@ -95,7 +111,9 @@ npm init
       √ Where does your code run? · browser, node
       √ What format do you want your config file to be in? · JavaScript
     ```
+
 1. 「.eslintrc.js」を開いてextendsとjqueryとrulesを追加する
+
     ```javascript
     module.exports = {
       "env": {
@@ -137,29 +155,36 @@ npm init
     };
     ```
 
-## expressのインストール
+### expressのインストール
+
 ターミナルを開いて以下のコマンドでexpressモジュールをインストールする
+
 ```bash
 npm install express
 ```
 
-## ejsのインストール
+### ejsのインストール
 
 1. VSCodeの拡張機能で「ejs」を検索してEJS language supportをインストール
 1. ejsパッケージをインストール
+
     ```bash
     npm install ejs
     ```
 
-## serve-faviconパッケージのインストール
+### serve-faviconパッケージのインストール
+
 faviconを配信するためにserve-faviconをインストールする
+
 ```bash
 npm install serve-favicon
 ```
 
-## サーバーサイド情報の隠ぺい
+### サーバーサイド情報の隠ぺい
+
 以下のコードをapp.jsに記述することで、サーバー側の情報を隠ぺいすることができる。
 これを記述しない場合、httpヘッダの応答からnode.jsのexpressを使用していることがバレるため、脆弱性情報から攻撃されやすくなる。
+
 ```javascript
 app.disable("x-powered-by");
 ```
